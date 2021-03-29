@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
-}
+@import "~antd/dist/antd.css";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  width: 100vw;
+  padding: 0 2rem;
+  background-color: #fff;
+  z-index: 3;
+  height: 3.5rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-bottom: 2px solid rgb(230, 228, 228);
+}
+.logo {
+  float: left;
+  font-size: 2rem;
+}
+.nav-container {
+  width: calc(100% - 6rem);
+  float: left;
+  vertical-align: middle;
+}
+.left-nav {
+  float: left;
+}
+.right-nav {
+  float: right;
+}
+.btn {
+  float: right;
+  height: 3rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  display: none !important;
+  background: none;
+  color: black;
+  border: none;
+  font-size: x-large;
+}
+.ant-menu-horizontal,
+.ant-menu-inline {
+  border: none;
+}
+@media (max-width: 767px) {
+  .btn {
+    display: inline-block !important;
+  }
+  .left-nav,
+  .right-nav {
+    display: none;
+  }
+  .nav-container {
+    width: calc(100%-5rem);
+    float: left;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fixed {
+  position: fixed;
+  top: 0;
 }
